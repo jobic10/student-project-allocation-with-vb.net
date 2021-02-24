@@ -28,9 +28,15 @@ Partial Class frmSplash
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.DarkGray
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.MaximizeBox = False
         Me.Name = "frmSplash"
+        Me.ShowIcon = False
+        Me.ShowInTaskbar = False
         Me.Text = "Form1"
+        Me.TopMost = True
         Me.ResumeLayout(False)
 
     End Sub
