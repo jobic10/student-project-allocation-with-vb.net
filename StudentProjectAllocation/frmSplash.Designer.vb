@@ -30,6 +30,10 @@ Partial Class frmSplash
         Me.barLoading = New System.Windows.Forms.ProgressBar()
         Me.lblProgress = New System.Windows.Forms.Label()
         Me.timerHome = New System.Windows.Forms.Timer(Me.components)
+        Me.lblStatus = New System.Windows.Forms.Label()
+        Me.timerStatus = New System.Windows.Forms.Timer(Me.components)
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'lblWelcome
@@ -85,14 +89,38 @@ Partial Class frmSplash
         Me.lblProgress.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblProgress.Location = New System.Drawing.Point(549, 419)
         Me.lblProgress.Name = "lblProgress"
-        Me.lblProgress.Size = New System.Drawing.Size(66, 24)
+        Me.lblProgress.Size = New System.Drawing.Size(78, 24)
         Me.lblProgress.TabIndex = 5
-        Me.lblProgress.Text = "Label4"
+        Me.lblProgress.Text = "Loading"
         '
         'timerHome
         '
         Me.timerHome.Enabled = True
-        Me.timerHome.Interval = 1000
+        Me.timerHome.Interval = 500
+        '
+        'lblStatus
+        '
+        Me.lblStatus.AutoSize = True
+        Me.lblStatus.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblStatus.Location = New System.Drawing.Point(12, 419)
+        Me.lblStatus.Name = "lblStatus"
+        Me.lblStatus.Size = New System.Drawing.Size(78, 24)
+        Me.lblStatus.TabIndex = 6
+        Me.lblStatus.Text = "Loading"
+        '
+        'timerStatus
+        '
+        Me.timerStatus.Enabled = True
+        Me.timerStatus.Interval = 1000
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.StudentProjectAllocation.My.Resources.Resources.logo
+        Me.PictureBox1.Location = New System.Drawing.Point(630, 211)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(144, 163)
+        Me.PictureBox1.TabIndex = 7
+        Me.PictureBox1.TabStop = False
         '
         'frmSplash
         '
@@ -100,6 +128,8 @@ Partial Class frmSplash
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DarkGray
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(Me.lblStatus)
         Me.Controls.Add(Me.lblProgress)
         Me.Controls.Add(Me.barLoading)
         Me.Controls.Add(Me.Label3)
@@ -113,6 +143,7 @@ Partial Class frmSplash
         Me.ShowInTaskbar = False
         Me.Text = "Form1"
         Me.TopMost = True
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -125,4 +156,7 @@ Partial Class frmSplash
     Friend WithEvents barLoading As ProgressBar
     Friend WithEvents lblProgress As Label
     Friend WithEvents timerHome As Timer
+    Friend WithEvents lblStatus As Label
+    Friend WithEvents timerStatus As Timer
+    Friend WithEvents PictureBox1 As PictureBox
 End Class
