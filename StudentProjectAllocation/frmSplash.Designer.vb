@@ -22,9 +22,14 @@ Partial Class frmSplash
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.lblWelcome = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.barLoading = New System.Windows.Forms.ProgressBar()
+        Me.lblProgress = New System.Windows.Forms.Label()
+        Me.timerHome = New System.Windows.Forms.Timer(Me.components)
         Me.SuspendLayout()
         '
         'lblWelcome
@@ -57,12 +62,47 @@ Partial Class frmSplash
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "STUDENT PROJECT ALLOCATION SYSTEM"
         '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(294, 242)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(179, 39)
+        Me.Label3.TabIndex = 3
+        Me.Label3.Text = "GROUP 1"
+        '
+        'barLoading
+        '
+        Me.barLoading.Location = New System.Drawing.Point(0, 380)
+        Me.barLoading.Name = "barLoading"
+        Me.barLoading.Size = New System.Drawing.Size(801, 34)
+        Me.barLoading.TabIndex = 4
+        '
+        'lblProgress
+        '
+        Me.lblProgress.AutoSize = True
+        Me.lblProgress.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblProgress.Location = New System.Drawing.Point(549, 419)
+        Me.lblProgress.Name = "lblProgress"
+        Me.lblProgress.Size = New System.Drawing.Size(66, 24)
+        Me.lblProgress.TabIndex = 5
+        Me.lblProgress.Text = "Label4"
+        '
+        'timerHome
+        '
+        Me.timerHome.Enabled = True
+        Me.timerHome.Interval = 1000
+        '
         'frmSplash
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DarkGray
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.lblProgress)
+        Me.Controls.Add(Me.barLoading)
+        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.lblWelcome)
@@ -81,4 +121,8 @@ Partial Class frmSplash
     Friend WithEvents lblWelcome As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents barLoading As ProgressBar
+    Friend WithEvents lblProgress As Label
+    Friend WithEvents timerHome As Timer
 End Class
