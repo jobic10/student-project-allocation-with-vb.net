@@ -19,6 +19,8 @@
             End If
             lblProgress.Text = "Loading " & barLoading.Value & " %"
         Else
+            frmLogin.Show()
+            Me.Hide()
             timerHome.Enabled = False
             End
         End If
@@ -31,6 +33,5 @@
             I = I + 1
         End If
         lblStatus.Text = msgs(I)
-        Console.WriteLine(I)
     End Sub
 End Class

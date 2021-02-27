@@ -23,8 +23,6 @@ Partial Class frmSplash
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.lblWelcome = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.barLoading = New System.Windows.Forms.ProgressBar()
@@ -36,33 +34,13 @@ Partial Class frmSplash
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'lblWelcome
-        '
-        Me.lblWelcome.AutoSize = True
-        Me.lblWelcome.Font = New System.Drawing.Font("Microsoft Sans Serif", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblWelcome.Location = New System.Drawing.Point(184, 9)
-        Me.lblWelcome.Name = "lblWelcome"
-        Me.lblWelcome.Size = New System.Drawing.Size(423, 39)
-        Me.lblWelcome.TabIndex = 0
-        Me.lblWelcome.Text = "UNIVERSITY OF ILORIN"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(41, 82)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(711, 39)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "DEPARTMENT OF COMPUTER SCIENCE"
-        '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(12, 160)
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(31, 177)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(762, 39)
+        Me.Label2.Size = New System.Drawing.Size(729, 39)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "STUDENT PROJECT ALLOCATION SYSTEM"
         '
@@ -70,7 +48,7 @@ Partial Class frmSplash
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(294, 242)
+        Me.Label3.Location = New System.Drawing.Point(308, 280)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(179, 39)
         Me.Label3.TabIndex = 3
@@ -116,9 +94,10 @@ Partial Class frmSplash
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.StudentProjectAllocation.My.Resources.Resources.logo
-        Me.PictureBox1.Location = New System.Drawing.Point(630, 211)
+        Me.PictureBox1.Location = New System.Drawing.Point(367, 12)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(144, 163)
+        Me.PictureBox1.Size = New System.Drawing.Size(85, 92)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 7
         Me.PictureBox1.TabStop = False
         '
@@ -126,7 +105,7 @@ Partial Class frmSplash
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.DarkGray
+        Me.BackColor = System.Drawing.Color.Silver
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.lblStatus)
@@ -134,8 +113,6 @@ Partial Class frmSplash
         Me.Controls.Add(Me.barLoading)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.lblWelcome)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.MaximizeBox = False
         Me.Name = "frmSplash"
@@ -148,9 +125,6 @@ Partial Class frmSplash
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents lblWelcome As Label
-    Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents barLoading As ProgressBar
