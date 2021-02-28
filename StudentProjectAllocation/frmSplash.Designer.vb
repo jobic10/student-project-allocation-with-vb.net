@@ -30,8 +30,8 @@ Partial Class frmSplash
         Me.timerHome = New System.Windows.Forms.Timer(Me.components)
         Me.lblStatus = New System.Windows.Forms.Label()
         Me.timerStatus = New System.Windows.Forms.Timer(Me.components)
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.picLogo = New System.Windows.Forms.PictureBox()
+        CType(Me.picLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label2
@@ -91,23 +91,24 @@ Partial Class frmSplash
         Me.timerStatus.Enabled = True
         Me.timerStatus.Interval = 1000
         '
-        'PictureBox1
+        'picLogo
         '
-        Me.PictureBox1.Image = Global.StudentProjectAllocation.My.Resources.Resources.logo
-        Me.PictureBox1.Location = New System.Drawing.Point(367, 12)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(85, 92)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 7
-        Me.PictureBox1.TabStop = False
+        Me.picLogo.Image = Global.StudentProjectAllocation.My.Resources.Resources.logo
+        Me.picLogo.InitialImage = Nothing
+        Me.picLogo.Location = New System.Drawing.Point(315, 12)
+        Me.picLogo.Name = "picLogo"
+        Me.picLogo.Size = New System.Drawing.Size(129, 128)
+        Me.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.picLogo.TabIndex = 7
+        Me.picLogo.TabStop = False
         '
         'frmSplash
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Silver
-        Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.PictureBox1)
+        Me.ClientSize = New System.Drawing.Size(800, 500)
+        Me.Controls.Add(Me.picLogo)
         Me.Controls.Add(Me.lblStatus)
         Me.Controls.Add(Me.lblProgress)
         Me.Controls.Add(Me.barLoading)
@@ -120,7 +121,7 @@ Partial Class frmSplash
         Me.ShowInTaskbar = False
         Me.Text = "Form1"
         Me.TopMost = True
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picLogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -132,5 +133,5 @@ Partial Class frmSplash
     Friend WithEvents timerHome As Timer
     Friend WithEvents lblStatus As Label
     Friend WithEvents timerStatus As Timer
-    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents picLogo As PictureBox
 End Class
