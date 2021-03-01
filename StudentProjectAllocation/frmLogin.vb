@@ -4,4 +4,27 @@
             End
         End If
     End Sub
+
+    Private Sub cmdLogin_Click(sender As Object, e As EventArgs) Handles cmdLogin.Click
+        'ConnectDatabase()
+        Dim username As String = ""
+        Dim password As String = ""
+        Try
+            username = txtUsername.Text
+            password = txtPassword.Text
+        Catch ex As Exception
+
+        End Try
+        cmd.Parameters.Clear()
+        cmd.CommandText = "SELECT username FROM users WHERE username =@username AND password=@password"
+        cmd.Parameters.AddWithValue("@username", username)
+        cmd.Parameters.AddWithValue("@password", password)
+        Query()
+        If Not obj Is Nothing Then
+            MsgBox("Yeah")
+        Else
+            MsgBox("Nah")
+        End If
+        DisconnectDatabase()
+    End Sub
 End Class

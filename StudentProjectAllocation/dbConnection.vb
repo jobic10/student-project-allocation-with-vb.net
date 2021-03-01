@@ -3,34 +3,43 @@ Imports MySql.Data.MySqlClient 'Very Important
 
 Module dbConnection
 
-    Sub Main()
-        Dim Connexion As New MySqlConnection
-        Dim db_name As String = "stockage"
-        Dim db_host As String = "localhost"
-        Dim db_username As String = "pma"
-        Dim db_password As String = "pmapass"
-
-        If Not Connexion Is Nothing Then Connexion.Close() 'to close already open connections
-        Connexion.ConnectionString = String.Format("server={0}; user id={1}; password={2}; database={3}; pooling=false", db_host, db_username, db_password, db_name)
+    Public conn As MySqlConnection = New MySqlConnection
+    Public ds As New DataSet
+    Public cmd As MySqlCommand = New MySqlCommand
+    Public dr As MySqlDataReader
+    Public sql As String
+    Public obj As Object
+    Public Sub ConnectDatabase()
 
         Try
-            Connexion.Open()
-            Console.WriteLine("Connected to server " + db_host)
+            If conn.State = ConnectionState.Closed Then
+                conn.ConnectionString = "server=localhost;userid=comsit;port=3306;password=justguess;database=student_project_allocation"
+                conn.Open()
+            End If
 
-            Dim Commande As MySqlCommand
-            Dim Requete As String = "UPDATE client SET nom_client ='client unknown' WHERE nom_client is null"
+        Catch myerror As Exception
+            MsgBox("Connection Error")
+            End
+        End Try
+    End Sub
+    Public Sub DisconnectDatabase()
+        Try
+            conn.Close()
+        Catch myerror As MySql.Data.MySqlClient.MySqlException
 
-            Commande = New MySqlCommand(Requete, Connexion)
-            Console.WriteLine("there was " & Commande.ExecuteNonQuery() & " lines changed")
-            Connexion.Close()
-            Console.WriteLine("Disconnected from server " + db_host)
-
-        Catch ex As MySqlException
-            MessageBox.Show("Cannot connect to database: " & ex.Message)
-
+        End Try
+    End Sub
+    Public Sub Query()
+        Try
+            ConnectDatabase()
+            cmd.Connection = conn
+            'conn.Open()
+            'dr = cmd.ExecuteReader
+            obj = cmd.ExecuteScalar()
+        Catch ex As Exception
+            MsgBox(ex.Message.ToString)
         Finally
-            Connexion.Dispose()
-
+            DisconnectDatabase()
         End Try
     End Sub
 End Module
