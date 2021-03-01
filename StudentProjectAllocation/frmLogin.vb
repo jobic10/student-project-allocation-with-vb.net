@@ -21,10 +21,9 @@
         cmd.Parameters.AddWithValue("@password", password)
         Query()
         If Not obj Is Nothing Then
-            MsgBox("Yeah")
+            MsgBox("Access Granted", vbInformation, "Success")
         Else
-            MsgBox("Nah")
+            MsgBox("Access Denied", vbCritical, "Error")
         End If
-        DisconnectDatabase()
     End Sub
 End Class

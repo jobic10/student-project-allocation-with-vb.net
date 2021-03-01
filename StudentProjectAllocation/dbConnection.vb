@@ -37,7 +37,7 @@ Module dbConnection
             'dr = cmd.ExecuteReader
             obj = cmd.ExecuteScalar()
         Catch ex As Exception
-            MsgBox(ex.Message.ToString)
+            MsgBox(ex.Message.ToString, vbCritical, "Error Occured")
         Finally
             DisconnectDatabase()
         End Try
