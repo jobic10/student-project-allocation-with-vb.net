@@ -66,7 +66,6 @@ Partial Class mdiHome
         Me.CopyToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PasteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.IndexToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.SearchToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip.SuspendLayout()
         Me.StatusStrip.SuspendLayout()
         Me.SuspendLayout()
@@ -159,7 +158,7 @@ Partial Class mdiHome
         Me.StatusBarToolStripMenuItem.CheckOnClick = True
         Me.StatusBarToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked
         Me.StatusBarToolStripMenuItem.Name = "StatusBarToolStripMenuItem"
-        Me.StatusBarToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.StatusBarToolStripMenuItem.Size = New System.Drawing.Size(126, 22)
         Me.StatusBarToolStripMenuItem.Text = "&Status Bar"
         '
         'ToolsMenu
@@ -220,7 +219,7 @@ Partial Class mdiHome
         '
         'HelpMenu
         '
-        Me.HelpMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ContentsToolStripMenuItem, Me.IndexToolStripMenuItem, Me.SearchToolStripMenuItem, Me.ToolStripSeparator8, Me.AboutToolStripMenuItem})
+        Me.HelpMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ContentsToolStripMenuItem, Me.IndexToolStripMenuItem, Me.ToolStripSeparator8, Me.AboutToolStripMenuItem})
         Me.HelpMenu.Name = "HelpMenu"
         Me.HelpMenu.Size = New System.Drawing.Size(44, 20)
         Me.HelpMenu.Text = "&Help"
@@ -229,18 +228,18 @@ Partial Class mdiHome
         '
         Me.ContentsToolStripMenuItem.Name = "ContentsToolStripMenuItem"
         Me.ContentsToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.F1), System.Windows.Forms.Keys)
-        Me.ContentsToolStripMenuItem.Size = New System.Drawing.Size(168, 22)
+        Me.ContentsToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ContentsToolStripMenuItem.Text = "&Contents"
         '
         'ToolStripSeparator8
         '
         Me.ToolStripSeparator8.Name = "ToolStripSeparator8"
-        Me.ToolStripSeparator8.Size = New System.Drawing.Size(165, 6)
+        Me.ToolStripSeparator8.Size = New System.Drawing.Size(177, 6)
         '
         'AboutToolStripMenuItem
         '
         Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
-        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(168, 22)
+        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.AboutToolStripMenuItem.Text = "&About ..."
         '
         'StatusStrip
@@ -352,16 +351,8 @@ Partial Class mdiHome
         Me.IndexToolStripMenuItem.Image = CType(resources.GetObject("IndexToolStripMenuItem.Image"), System.Drawing.Image)
         Me.IndexToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Black
         Me.IndexToolStripMenuItem.Name = "IndexToolStripMenuItem"
-        Me.IndexToolStripMenuItem.Size = New System.Drawing.Size(168, 22)
+        Me.IndexToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.IndexToolStripMenuItem.Text = "&Index"
-        '
-        'SearchToolStripMenuItem
-        '
-        Me.SearchToolStripMenuItem.Image = CType(resources.GetObject("SearchToolStripMenuItem.Image"), System.Drawing.Image)
-        Me.SearchToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Black
-        Me.SearchToolStripMenuItem.Name = "SearchToolStripMenuItem"
-        Me.SearchToolStripMenuItem.Size = New System.Drawing.Size(168, 22)
-        Me.SearchToolStripMenuItem.Text = "&Search"
         '
         'mdiHome
         '
@@ -385,7 +376,6 @@ Partial Class mdiHome
     Friend WithEvents ContentsToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents HelpMenu As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents IndexToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents SearchToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolStripSeparator8 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents AboutToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ArrangeIconsToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem

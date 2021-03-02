@@ -8,10 +8,10 @@ Imports System.Runtime.InteropServices
 
 ' Review the values of the assembly attributes
 
-<Assembly: AssemblyTitle("StudentProjectAllocation")>
-<Assembly: AssemblyDescription("")>
-<Assembly: AssemblyCompany("")>
-<Assembly: AssemblyProduct("StudentProjectAllocation")>
+<Assembly: AssemblyTitle("Student Project Allocation System")>
+<Assembly: AssemblyDescription("Student Project Allocation (SPA) System eases the manual method of allocating supervisors to students. This was piloted by Dr. K. S. Adewole. This project was carried out by VB Group 1. Daily update on this project is reported to the GitHub repository. See commits history.")>
+<Assembly: AssemblyCompany("VB GROUP 1")>
+<Assembly: AssemblyProduct("Student Project Allocation System")>
 <Assembly: AssemblyCopyright("Copyright ©  2021")>
 <Assembly: AssemblyTrademark("")>
 

@@ -82,4 +82,7 @@ Public Class mdiHome
 
     Private m_ChildFormNumber As Integer
 
+    Private Sub AboutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AboutToolStripMenuItem.Click
+        frmAbout.Show()
+    End Sub
 End Class
