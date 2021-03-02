@@ -22,6 +22,8 @@
         Query()
         If Not obj Is Nothing Then
             MsgBox("Access Granted", vbInformation, "Success")
+            txtUsername.Text = ""
+            txtPassword.Text = ""
             Me.Hide()
             mdiHome.Show()
         Else
