@@ -106,6 +106,12 @@
       <DependentUpon>frmSplash.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="mdiHome.Designer.vb">
+      <DependentUpon>mdiHome.vb</DependentUpon>
+    </Compile>
+    <Compile Include="mdiHome.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -128,6 +134,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmSplash.resx">
       <DependentUpon>frmSplash.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mdiHome.resx">
+      <DependentUpon>mdiHome.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>PublicVbMyResourcesResXFileCodeGenerator</Generator>

@@ -22,6 +22,8 @@
         Query()
         If Not obj Is Nothing Then
             MsgBox("Access Granted", vbInformation, "Success")
+            Me.Hide()
+            mdiHome.Show()
         Else
             MsgBox("Access Denied", vbCritical, "Error")
         End If
