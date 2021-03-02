@@ -15,6 +15,9 @@
             Query()
             If mysqli_num_rows > 0 Then
                 showInfo("New Supervisor Has Been Created")
+                txtFileNo.Text = ""
+                txtFullName.Text = ""
+
             Else
                 showError("Supervisor could not be added. Duplicate File No ")
             End If
