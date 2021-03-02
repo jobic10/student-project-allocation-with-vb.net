@@ -1,4 +1,6 @@
-﻿Public Class addSupervisor
+﻿Imports MySql.Data.MySqlClient
+
+Public Class addSupervisor
     Private Sub cmdAdd_Click(sender As Object, e As EventArgs) Handles cmdAdd.Click
         Dim fileno As String = ""
         Dim fullname As String = ""
@@ -14,6 +16,7 @@
             cmd.Parameters.AddWithValue("@fileno", fileno)
             Query()
             If mysqli_num_rows > 0 Then
+                loadData()
                 showInfo("New Supervisor Has Been Created")
                 txtFileNo.Text = ""
                 txtFullName.Text = ""
@@ -24,5 +27,17 @@
         Catch ex As Exception
             showError(ex.ToString())
         End Try
+    End Sub
+
+    Private Sub addSupervisor_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        loadData()
+    End Sub
+    Public Sub loadData()
+        ConnectDatabase()
+        Dim ds As New DataSet()
+        Dim adapter As New MySqlDataAdapter("SELECT * FROM supervisors", conn)
+        adapter.Fill(ds, "Supervisors")
+        allSup.DataSource = ds.Tables(0)
+        DisconnectDatabase()
     End Sub
 End Class

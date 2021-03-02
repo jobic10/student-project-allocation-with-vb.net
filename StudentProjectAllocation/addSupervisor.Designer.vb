@@ -27,13 +27,15 @@ Partial Class addSupervisor
         Me.txtFileNo = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.cmdAdd = New System.Windows.Forms.Button()
+        Me.allSup = New System.Windows.Forms.DataGridView()
+        CType(Me.allSup, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Monotype Corsiva", 15.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(46, 20)
+        Me.Label1.Location = New System.Drawing.Point(12, 18)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(93, 25)
         Me.Label1.TabIndex = 0
@@ -42,7 +44,7 @@ Partial Class addSupervisor
         'txtFullName
         '
         Me.txtFullName.Font = New System.Drawing.Font("Times New Roman", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtFullName.Location = New System.Drawing.Point(151, 18)
+        Me.txtFullName.Location = New System.Drawing.Point(117, 16)
         Me.txtFullName.Name = "txtFullName"
         Me.txtFullName.Size = New System.Drawing.Size(246, 32)
         Me.txtFullName.TabIndex = 1
@@ -50,7 +52,7 @@ Partial Class addSupervisor
         'txtFileNo
         '
         Me.txtFileNo.Font = New System.Drawing.Font("Times New Roman", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtFileNo.Location = New System.Drawing.Point(151, 79)
+        Me.txtFileNo.Location = New System.Drawing.Point(117, 77)
         Me.txtFileNo.Name = "txtFileNo"
         Me.txtFileNo.Size = New System.Drawing.Size(246, 32)
         Me.txtFileNo.TabIndex = 3
@@ -59,7 +61,7 @@ Partial Class addSupervisor
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Monotype Corsiva", 15.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(46, 81)
+        Me.Label2.Location = New System.Drawing.Point(12, 79)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(69, 25)
         Me.Label2.TabIndex = 2
@@ -69,18 +71,28 @@ Partial Class addSupervisor
         '
         Me.cmdAdd.AutoSize = True
         Me.cmdAdd.Font = New System.Drawing.Font("Monotype Corsiva", 14.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdAdd.Location = New System.Drawing.Point(265, 130)
+        Me.cmdAdd.Location = New System.Drawing.Point(231, 128)
         Me.cmdAdd.Name = "cmdAdd"
         Me.cmdAdd.Size = New System.Drawing.Size(132, 62)
         Me.cmdAdd.TabIndex = 4
         Me.cmdAdd.Text = "Add Supervisor"
         Me.cmdAdd.UseVisualStyleBackColor = True
         '
+        'allSup
+        '
+        Me.allSup.AllowUserToOrderColumns = True
+        Me.allSup.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.allSup.Location = New System.Drawing.Point(17, 280)
+        Me.allSup.Name = "allSup"
+        Me.allSup.Size = New System.Drawing.Size(702, 240)
+        Me.allSup.TabIndex = 5
+        '
         'addSupervisor
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(479, 224)
+        Me.ClientSize = New System.Drawing.Size(728, 532)
+        Me.Controls.Add(Me.allSup)
         Me.Controls.Add(Me.cmdAdd)
         Me.Controls.Add(Me.txtFileNo)
         Me.Controls.Add(Me.Label2)
@@ -88,6 +100,7 @@ Partial Class addSupervisor
         Me.Controls.Add(Me.Label1)
         Me.Name = "addSupervisor"
         Me.Text = "Add New Supervisor"
+        CType(Me.allSup, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -98,4 +111,5 @@ Partial Class addSupervisor
     Friend WithEvents txtFileNo As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents cmdAdd As Button
+    Friend WithEvents allSup As DataGridView
 End Class
