@@ -9,6 +9,7 @@ Module dbConnection
     Public dr As MySqlDataReader
     Public sql As String
     Public obj As Object
+    Public mysqli_num_rows As Integer = -1
     Public Sub ConnectDatabase()
 
         Try
@@ -25,21 +26,34 @@ Module dbConnection
     Public Sub DisconnectDatabase()
         Try
             conn.Close()
+            cmd.Parameters.Clear()
         Catch myerror As MySql.Data.MySqlClient.MySqlException
-
         End Try
     End Sub
-    Public Sub Query()
+    Public Sub Query(Optional ByVal type = "I")
+        mysqli_num_rows = -1
         Try
             ConnectDatabase()
             cmd.Connection = conn
             'conn.Open()
             'dr = cmd.ExecuteReader
-            obj = cmd.ExecuteScalar()
+            type = UCase(type)
+            If (type = "I" Or type = "D") Then 'insert/delete
+                mysqli_num_rows = cmd.ExecuteNonQuery()
+            Else
+                obj = cmd.ExecuteScalar()
+            End If
+            cmd.Parameters.Clear()
+
         Catch ex As Exception
-            MsgBox(ex.Message.ToString, vbCritical, "Error Occured")
+            ' showError("Error Occured " & ex.ToString())
         Finally
             DisconnectDatabase()
         End Try
     End Sub
+
+    Public Sub Insert()
+
+    End Sub
+
 End Module

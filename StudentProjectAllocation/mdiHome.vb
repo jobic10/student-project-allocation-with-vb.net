@@ -58,4 +58,9 @@ Public Class mdiHome
         Me.GroupNameToolStripMenuItem.Checked = Not Me.GroupNameToolStripMenuItem.Checked
         Me.lblGroupInfo.Visible = Me.GroupNameToolStripMenuItem.Checked
     End Sub
+
+    Private Sub AddNewSupervisorToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AddNewSupervisorToolStripMenuItem.Click
+        addSupervisor.MdiParent = Me
+        addSupervisor.Show()
+    End Sub
 End Class

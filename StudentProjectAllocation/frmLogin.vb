@@ -15,7 +15,6 @@
         Catch ex As Exception
 
         End Try
-        cmd.Parameters.Clear()
         cmd.CommandText = "SELECT username FROM users WHERE username =@username AND password=@password"
         cmd.Parameters.AddWithValue("@username", username)
         cmd.Parameters.AddWithValue("@password", password)
