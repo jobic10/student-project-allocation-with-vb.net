@@ -4,6 +4,7 @@ Imports MySql.Data.MySqlClient 'Very Important
 Module dbConnection
 
     Public conn As MySqlConnection = New MySqlConnection
+    Public conn2 As MySqlConnection = New MySqlConnection
     Public ds As New DataSet
     Public cmd As MySqlCommand = New MySqlCommand
     Public dr As MySqlDataReader
@@ -26,6 +27,8 @@ Module dbConnection
     Public Sub DisconnectDatabase()
         Try
             conn.Close()
+            'dr.Close()
+            ds.Clear()
             cmd.Parameters.Clear()
         Catch myerror As MySql.Data.MySqlClient.MySqlException
         End Try
@@ -40,7 +43,9 @@ Module dbConnection
             type = UCase(type)
             If (type = "I" Or type = "D") Then 'insert/delete
                 mysqli_num_rows = cmd.ExecuteNonQuery()
-            Else
+            ElseIf (type = "A") Then
+                dr = cmd.ExecuteReader()
+
                 obj = cmd.ExecuteScalar()
             End If
             cmd.Parameters.Clear()
@@ -48,12 +53,11 @@ Module dbConnection
         Catch ex As Exception
             ' showError("Error Occured " & ex.ToString())
         Finally
-            DisconnectDatabase()
+            If (Not type = "A") Then
+                DisconnectDatabase()
+            End If
         End Try
     End Sub
 
-    Public Sub Insert()
-
-    End Sub
 
 End Module

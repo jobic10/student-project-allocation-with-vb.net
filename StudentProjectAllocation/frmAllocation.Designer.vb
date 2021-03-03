@@ -33,6 +33,8 @@ Partial Class frmAllocation
         '
         Me.gridSupervisor.AllowUserToAddRows = False
         Me.gridSupervisor.AllowUserToDeleteRows = False
+        Me.gridSupervisor.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.gridSupervisor.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells
         Me.gridSupervisor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.gridSupervisor.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.gridSupervisor.Location = New System.Drawing.Point(0, 276)
@@ -45,6 +47,8 @@ Partial Class frmAllocation
         '
         Me.gridStudents.AllowUserToAddRows = False
         Me.gridStudents.AllowUserToDeleteRows = False
+        Me.gridStudents.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.gridStudents.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.gridStudents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.gridStudents.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.gridStudents.Location = New System.Drawing.Point(0, 102)
@@ -63,7 +67,6 @@ Partial Class frmAllocation
         Me.cmdAllocate.TabIndex = 17
         Me.cmdAllocate.Text = "Perform Allocation"
         Me.cmdAllocate.UseVisualStyleBackColor = True
-        Me.cmdAllocate.Visible = False
         '
         'frmAllocation
         '

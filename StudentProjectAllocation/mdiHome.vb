@@ -68,4 +68,9 @@ Public Class mdiHome
         addStudent.MdiParent = Me
         addStudent.Show()
     End Sub
+
+    Private Sub AllocationMenu_Click(sender As Object, e As EventArgs) Handles AllocationMenu.Click
+        frmAllocation.MdiParent = Me
+        frmAllocation.Show()
+    End Sub
 End Class

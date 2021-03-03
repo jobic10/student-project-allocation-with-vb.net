@@ -51,11 +51,11 @@ Partial Class mdiHome
         Me.tmrDateTIme = New System.Windows.Forms.Timer(Me.components)
         Me.lblGroupInfo = New System.Windows.Forms.Label()
         Me.AddNewSupervisorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.dropdownLogout = New System.Windows.Forms.ToolStripMenuItem()
-        Me.IndexToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.StudentMenu = New System.Windows.Forms.ToolStripMenuItem()
         Me.ManageStudentsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AllocationMenu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.dropdownLogout = New System.Windows.Forms.ToolStripMenuItem()
+        Me.IndexToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip.SuspendLayout()
         Me.StatusStrip.SuspendLayout()
         Me.SuspendLayout()
@@ -81,12 +81,12 @@ Partial Class mdiHome
         'ToolStripSeparator5
         '
         Me.ToolStripSeparator5.Name = "ToolStripSeparator5"
-        Me.ToolStripSeparator5.Size = New System.Drawing.Size(177, 6)
+        Me.ToolStripSeparator5.Size = New System.Drawing.Size(152, 6)
         '
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(155, 22)
         Me.ExitToolStripMenuItem.Text = "E&xit"
         '
         'SupervisorMenu
@@ -110,7 +110,7 @@ Partial Class mdiHome
         Me.StatusBarToolStripMenuItem.CheckOnClick = True
         Me.StatusBarToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked
         Me.StatusBarToolStripMenuItem.Name = "StatusBarToolStripMenuItem"
-        Me.StatusBarToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.StatusBarToolStripMenuItem.Size = New System.Drawing.Size(142, 22)
         Me.StatusBarToolStripMenuItem.Text = "&Status Bar"
         '
         'GroupNameToolStripMenuItem
@@ -118,7 +118,7 @@ Partial Class mdiHome
         Me.GroupNameToolStripMenuItem.Checked = True
         Me.GroupNameToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked
         Me.GroupNameToolStripMenuItem.Name = "GroupNameToolStripMenuItem"
-        Me.GroupNameToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.GroupNameToolStripMenuItem.Size = New System.Drawing.Size(142, 22)
         Me.GroupNameToolStripMenuItem.Text = "Group Name"
         '
         'WindowsMenu
@@ -131,31 +131,31 @@ Partial Class mdiHome
         'CascadeToolStripMenuItem
         '
         Me.CascadeToolStripMenuItem.Name = "CascadeToolStripMenuItem"
-        Me.CascadeToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.CascadeToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
         Me.CascadeToolStripMenuItem.Text = "&Cascade"
         '
         'TileVerticalToolStripMenuItem
         '
         Me.TileVerticalToolStripMenuItem.Name = "TileVerticalToolStripMenuItem"
-        Me.TileVerticalToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.TileVerticalToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
         Me.TileVerticalToolStripMenuItem.Text = "Tile &Vertical"
         '
         'TileHorizontalToolStripMenuItem
         '
         Me.TileHorizontalToolStripMenuItem.Name = "TileHorizontalToolStripMenuItem"
-        Me.TileHorizontalToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.TileHorizontalToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
         Me.TileHorizontalToolStripMenuItem.Text = "Tile &Horizontal"
         '
         'CloseAllToolStripMenuItem
         '
         Me.CloseAllToolStripMenuItem.Name = "CloseAllToolStripMenuItem"
-        Me.CloseAllToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.CloseAllToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
         Me.CloseAllToolStripMenuItem.Text = "C&lose All"
         '
         'ArrangeIconsToolStripMenuItem
         '
         Me.ArrangeIconsToolStripMenuItem.Name = "ArrangeIconsToolStripMenuItem"
-        Me.ArrangeIconsToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ArrangeIconsToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
         Me.ArrangeIconsToolStripMenuItem.Text = "&Arrange Icons"
         '
         'HelpMenu
@@ -168,12 +168,12 @@ Partial Class mdiHome
         'ToolStripSeparator8
         '
         Me.ToolStripSeparator8.Name = "ToolStripSeparator8"
-        Me.ToolStripSeparator8.Size = New System.Drawing.Size(177, 6)
+        Me.ToolStripSeparator8.Size = New System.Drawing.Size(157, 6)
         '
         'AboutToolStripMenuItem
         '
         Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
-        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(160, 22)
         Me.AboutToolStripMenuItem.Text = "&About ..."
         '
         'StatusStrip
@@ -236,23 +236,6 @@ Partial Class mdiHome
         Me.AddNewSupervisorToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.AddNewSupervisorToolStripMenuItem.Text = "Manage Supervisors"
         '
-        'dropdownLogout
-        '
-        Me.dropdownLogout.Image = CType(resources.GetObject("dropdownLogout.Image"), System.Drawing.Image)
-        Me.dropdownLogout.ImageTransparentColor = System.Drawing.Color.Black
-        Me.dropdownLogout.Name = "dropdownLogout"
-        Me.dropdownLogout.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.L), System.Windows.Forms.Keys)
-        Me.dropdownLogout.Size = New System.Drawing.Size(180, 22)
-        Me.dropdownLogout.Text = "&Log out"
-        '
-        'IndexToolStripMenuItem
-        '
-        Me.IndexToolStripMenuItem.Image = CType(resources.GetObject("IndexToolStripMenuItem.Image"), System.Drawing.Image)
-        Me.IndexToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Black
-        Me.IndexToolStripMenuItem.Name = "IndexToolStripMenuItem"
-        Me.IndexToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.IndexToolStripMenuItem.Text = "&Group Members"
-        '
         'StudentMenu
         '
         Me.StudentMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ManageStudentsToolStripMenuItem})
@@ -263,7 +246,7 @@ Partial Class mdiHome
         'ManageStudentsToolStripMenuItem
         '
         Me.ManageStudentsToolStripMenuItem.Name = "ManageStudentsToolStripMenuItem"
-        Me.ManageStudentsToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ManageStudentsToolStripMenuItem.Size = New System.Drawing.Size(166, 22)
         Me.ManageStudentsToolStripMenuItem.Text = "Manage Students"
         '
         'AllocationMenu
@@ -271,6 +254,23 @@ Partial Class mdiHome
         Me.AllocationMenu.Name = "AllocationMenu"
         Me.AllocationMenu.Size = New System.Drawing.Size(73, 20)
         Me.AllocationMenu.Text = "Allocation"
+        '
+        'dropdownLogout
+        '
+        Me.dropdownLogout.Image = CType(resources.GetObject("dropdownLogout.Image"), System.Drawing.Image)
+        Me.dropdownLogout.ImageTransparentColor = System.Drawing.Color.Black
+        Me.dropdownLogout.Name = "dropdownLogout"
+        Me.dropdownLogout.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.L), System.Windows.Forms.Keys)
+        Me.dropdownLogout.Size = New System.Drawing.Size(155, 22)
+        Me.dropdownLogout.Text = "&Log out"
+        '
+        'IndexToolStripMenuItem
+        '
+        Me.IndexToolStripMenuItem.Image = CType(resources.GetObject("IndexToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.IndexToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Black
+        Me.IndexToolStripMenuItem.Name = "IndexToolStripMenuItem"
+        Me.IndexToolStripMenuItem.Size = New System.Drawing.Size(160, 22)
+        Me.IndexToolStripMenuItem.Text = "&Group Members"
         '
         'mdiHome
         '
