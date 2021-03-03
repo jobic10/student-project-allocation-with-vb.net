@@ -35,10 +35,6 @@ Public Class mdiHome
         frmAbout.Show()
     End Sub
 
-    Private Sub IndexToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles IndexToolStripMenuItem.Click
-
-    End Sub
-
     Private Sub dropdownLogout_Click(sender As Object, e As EventArgs) Handles dropdownLogout.Click
         ' Close all child forms of the parent.
         For Each ChildForm As Form In Me.MdiChildren
@@ -72,5 +68,10 @@ Public Class mdiHome
     Private Sub AllocationMenu_Click(sender As Object, e As EventArgs) Handles AllocationMenu.Click
         frmAllocation.MdiParent = Me
         frmAllocation.Show()
+    End Sub
+
+    Private Sub GroupMembersMenu_Click(sender As Object, e As EventArgs) Handles GroupMembersMenu.Click
+        frmDevelopers.MdiParent = Me
+        frmDevelopers.Show()
     End Sub
 End Class

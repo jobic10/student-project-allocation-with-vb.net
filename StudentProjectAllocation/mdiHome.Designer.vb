@@ -27,9 +27,14 @@ Partial Class mdiHome
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(mdiHome))
         Me.MenuStrip = New System.Windows.Forms.MenuStrip()
         Me.FileMenu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.dropdownLogout = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator()
         Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AllocationMenu = New System.Windows.Forms.ToolStripMenuItem()
         Me.SupervisorMenu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AddNewSupervisorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.StudentMenu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ManageStudentsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ViewMenu = New System.Windows.Forms.ToolStripMenuItem()
         Me.StatusBarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GroupNameToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -40,8 +45,9 @@ Partial Class mdiHome
         Me.CloseAllToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ArrangeIconsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpMenu = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripSeparator8 = New System.Windows.Forms.ToolStripSeparator()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator8 = New System.Windows.Forms.ToolStripSeparator()
+        Me.GroupMembersMenu = New System.Windows.Forms.ToolStripMenuItem()
         Me.StatusStrip = New System.Windows.Forms.StatusStrip()
         Me.lblDate = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
@@ -50,12 +56,6 @@ Partial Class mdiHome
         Me.ToolTip = New System.Windows.Forms.ToolTip(Me.components)
         Me.tmrDateTIme = New System.Windows.Forms.Timer(Me.components)
         Me.lblGroupInfo = New System.Windows.Forms.Label()
-        Me.AddNewSupervisorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.StudentMenu = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ManageStudentsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AllocationMenu = New System.Windows.Forms.ToolStripMenuItem()
-        Me.dropdownLogout = New System.Windows.Forms.ToolStripMenuItem()
-        Me.IndexToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip.SuspendLayout()
         Me.StatusStrip.SuspendLayout()
         Me.SuspendLayout()
@@ -66,7 +66,7 @@ Partial Class mdiHome
         Me.MenuStrip.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip.MdiWindowListItem = Me.WindowsMenu
         Me.MenuStrip.Name = "MenuStrip"
-        Me.MenuStrip.Size = New System.Drawing.Size(632, 24)
+        Me.MenuStrip.Size = New System.Drawing.Size(1047, 24)
         Me.MenuStrip.TabIndex = 5
         Me.MenuStrip.Text = "MenuStrip"
         '
@@ -77,6 +77,15 @@ Partial Class mdiHome
         Me.FileMenu.Name = "FileMenu"
         Me.FileMenu.Size = New System.Drawing.Size(37, 20)
         Me.FileMenu.Text = "&File"
+        '
+        'dropdownLogout
+        '
+        Me.dropdownLogout.Image = CType(resources.GetObject("dropdownLogout.Image"), System.Drawing.Image)
+        Me.dropdownLogout.ImageTransparentColor = System.Drawing.Color.Black
+        Me.dropdownLogout.Name = "dropdownLogout"
+        Me.dropdownLogout.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.L), System.Windows.Forms.Keys)
+        Me.dropdownLogout.Size = New System.Drawing.Size(155, 22)
+        Me.dropdownLogout.Text = "&Log out"
         '
         'ToolStripSeparator5
         '
@@ -89,6 +98,12 @@ Partial Class mdiHome
         Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(155, 22)
         Me.ExitToolStripMenuItem.Text = "E&xit"
         '
+        'AllocationMenu
+        '
+        Me.AllocationMenu.Name = "AllocationMenu"
+        Me.AllocationMenu.Size = New System.Drawing.Size(73, 20)
+        Me.AllocationMenu.Text = "Allocation"
+        '
         'SupervisorMenu
         '
         Me.SupervisorMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddNewSupervisorToolStripMenuItem})
@@ -96,6 +111,25 @@ Partial Class mdiHome
         Me.SupervisorMenu.ShortcutKeys = CType((System.Windows.Forms.Keys.Alt Or System.Windows.Forms.Keys.S), System.Windows.Forms.Keys)
         Me.SupervisorMenu.Size = New System.Drawing.Size(79, 20)
         Me.SupervisorMenu.Text = "&Supervisors"
+        '
+        'AddNewSupervisorToolStripMenuItem
+        '
+        Me.AddNewSupervisorToolStripMenuItem.Name = "AddNewSupervisorToolStripMenuItem"
+        Me.AddNewSupervisorToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.AddNewSupervisorToolStripMenuItem.Text = "Manage Supervisors"
+        '
+        'StudentMenu
+        '
+        Me.StudentMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ManageStudentsToolStripMenuItem})
+        Me.StudentMenu.Name = "StudentMenu"
+        Me.StudentMenu.Size = New System.Drawing.Size(65, 20)
+        Me.StudentMenu.Text = "S&tudents"
+        '
+        'ManageStudentsToolStripMenuItem
+        '
+        Me.ManageStudentsToolStripMenuItem.Name = "ManageStudentsToolStripMenuItem"
+        Me.ManageStudentsToolStripMenuItem.Size = New System.Drawing.Size(166, 22)
+        Me.ManageStudentsToolStripMenuItem.Text = "Manage Students"
         '
         'ViewMenu
         '
@@ -160,21 +194,29 @@ Partial Class mdiHome
         '
         'HelpMenu
         '
-        Me.HelpMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AboutToolStripMenuItem, Me.ToolStripSeparator8, Me.IndexToolStripMenuItem})
+        Me.HelpMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AboutToolStripMenuItem, Me.ToolStripSeparator8, Me.GroupMembersMenu})
         Me.HelpMenu.Name = "HelpMenu"
         Me.HelpMenu.Size = New System.Drawing.Size(44, 20)
         Me.HelpMenu.Text = "&Help"
         '
-        'ToolStripSeparator8
-        '
-        Me.ToolStripSeparator8.Name = "ToolStripSeparator8"
-        Me.ToolStripSeparator8.Size = New System.Drawing.Size(157, 6)
-        '
         'AboutToolStripMenuItem
         '
         Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
-        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(160, 22)
+        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.AboutToolStripMenuItem.Text = "&About ..."
+        '
+        'ToolStripSeparator8
+        '
+        Me.ToolStripSeparator8.Name = "ToolStripSeparator8"
+        Me.ToolStripSeparator8.Size = New System.Drawing.Size(177, 6)
+        '
+        'GroupMembersMenu
+        '
+        Me.GroupMembersMenu.Image = CType(resources.GetObject("GroupMembersMenu.Image"), System.Drawing.Image)
+        Me.GroupMembersMenu.ImageTransparentColor = System.Drawing.Color.Black
+        Me.GroupMembersMenu.Name = "GroupMembersMenu"
+        Me.GroupMembersMenu.Size = New System.Drawing.Size(180, 22)
+        Me.GroupMembersMenu.Text = "&Group Members"
         '
         'StatusStrip
         '
@@ -183,7 +225,7 @@ Partial Class mdiHome
         Me.StatusStrip.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow
         Me.StatusStrip.Location = New System.Drawing.Point(0, 420)
         Me.StatusStrip.Name = "StatusStrip"
-        Me.StatusStrip.Size = New System.Drawing.Size(632, 33)
+        Me.StatusStrip.Size = New System.Drawing.Size(1047, 33)
         Me.StatusStrip.SizingGrip = False
         Me.StatusStrip.TabIndex = 7
         '
@@ -224,60 +266,18 @@ Partial Class mdiHome
         'lblGroupInfo
         '
         Me.lblGroupInfo.AutoSize = True
-        Me.lblGroupInfo.Location = New System.Drawing.Point(406, 4)
+        Me.lblGroupInfo.Location = New System.Drawing.Point(634, 9)
         Me.lblGroupInfo.Name = "lblGroupInfo"
         Me.lblGroupInfo.Size = New System.Drawing.Size(209, 13)
         Me.lblGroupInfo.TabIndex = 9
         Me.lblGroupInfo.Text = "Group 1 - Supervised By Dr. K. S. Adewole"
-        '
-        'AddNewSupervisorToolStripMenuItem
-        '
-        Me.AddNewSupervisorToolStripMenuItem.Name = "AddNewSupervisorToolStripMenuItem"
-        Me.AddNewSupervisorToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.AddNewSupervisorToolStripMenuItem.Text = "Manage Supervisors"
-        '
-        'StudentMenu
-        '
-        Me.StudentMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ManageStudentsToolStripMenuItem})
-        Me.StudentMenu.Name = "StudentMenu"
-        Me.StudentMenu.Size = New System.Drawing.Size(65, 20)
-        Me.StudentMenu.Text = "S&tudents"
-        '
-        'ManageStudentsToolStripMenuItem
-        '
-        Me.ManageStudentsToolStripMenuItem.Name = "ManageStudentsToolStripMenuItem"
-        Me.ManageStudentsToolStripMenuItem.Size = New System.Drawing.Size(166, 22)
-        Me.ManageStudentsToolStripMenuItem.Text = "Manage Students"
-        '
-        'AllocationMenu
-        '
-        Me.AllocationMenu.Name = "AllocationMenu"
-        Me.AllocationMenu.Size = New System.Drawing.Size(73, 20)
-        Me.AllocationMenu.Text = "Allocation"
-        '
-        'dropdownLogout
-        '
-        Me.dropdownLogout.Image = CType(resources.GetObject("dropdownLogout.Image"), System.Drawing.Image)
-        Me.dropdownLogout.ImageTransparentColor = System.Drawing.Color.Black
-        Me.dropdownLogout.Name = "dropdownLogout"
-        Me.dropdownLogout.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.L), System.Windows.Forms.Keys)
-        Me.dropdownLogout.Size = New System.Drawing.Size(155, 22)
-        Me.dropdownLogout.Text = "&Log out"
-        '
-        'IndexToolStripMenuItem
-        '
-        Me.IndexToolStripMenuItem.Image = CType(resources.GetObject("IndexToolStripMenuItem.Image"), System.Drawing.Image)
-        Me.IndexToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Black
-        Me.IndexToolStripMenuItem.Name = "IndexToolStripMenuItem"
-        Me.IndexToolStripMenuItem.Size = New System.Drawing.Size(160, 22)
-        Me.IndexToolStripMenuItem.Text = "&Group Members"
         '
         'mdiHome
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(96.0!, 96.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
         Me.AutoSize = True
-        Me.ClientSize = New System.Drawing.Size(632, 453)
+        Me.ClientSize = New System.Drawing.Size(1047, 453)
         Me.Controls.Add(Me.lblGroupInfo)
         Me.Controls.Add(Me.MenuStrip)
         Me.Controls.Add(Me.StatusStrip)
@@ -295,7 +295,7 @@ Partial Class mdiHome
 
     End Sub
     Friend WithEvents HelpMenu As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents IndexToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents GroupMembersMenu As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolStripSeparator8 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents AboutToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ArrangeIconsToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem

@@ -3,13 +3,11 @@
     Public FullName As String
     Public MatricNumber As String
     Public Photo As String
-    Public Role As String
 
-    Public Sub New(fullname As String, regno As String, avatar As String, role As String)
+    Public Sub New(fullname As String, regno As String)
         Me.FullName = fullname
         Me.MatricNumber = regno
-        Me.Photo = avatar
-        Me.Role = role
-        Console.WriteLine("New Student Created")
+        Me.Photo = regno.Substring(regno.Length - 3) 'Last three characters
+        Console.WriteLine("New Student Created = " & Me.Photo)
     End Sub
 End Class
