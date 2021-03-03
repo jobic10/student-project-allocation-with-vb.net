@@ -28,6 +28,7 @@ Partial Class addSupervisor
         Me.Label2 = New System.Windows.Forms.Label()
         Me.cmdAdd = New System.Windows.Forms.Button()
         Me.allSup = New System.Windows.Forms.DataGridView()
+        Me.cmdUpdate = New System.Windows.Forms.Button()
         CType(Me.allSup, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -80,18 +81,41 @@ Partial Class addSupervisor
         '
         'allSup
         '
+        Me.allSup.AllowDrop = True
+        Me.allSup.AllowUserToAddRows = False
+        Me.allSup.AllowUserToDeleteRows = False
         Me.allSup.AllowUserToOrderColumns = True
+        Me.allSup.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.allSup.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
+        Me.allSup.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.allSup.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
         Me.allSup.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.allSup.Location = New System.Drawing.Point(17, 280)
+        Me.allSup.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.allSup.Location = New System.Drawing.Point(0, 292)
         Me.allSup.Name = "allSup"
-        Me.allSup.Size = New System.Drawing.Size(702, 240)
+        Me.allSup.ReadOnly = True
+        Me.allSup.ShowEditingIcon = False
+        Me.allSup.Size = New System.Drawing.Size(728, 240)
         Me.allSup.TabIndex = 5
+        '
+        'cmdUpdate
+        '
+        Me.cmdUpdate.AutoSize = True
+        Me.cmdUpdate.Font = New System.Drawing.Font("Monotype Corsiva", 14.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdUpdate.Location = New System.Drawing.Point(117, 128)
+        Me.cmdUpdate.Name = "cmdUpdate"
+        Me.cmdUpdate.Size = New System.Drawing.Size(147, 62)
+        Me.cmdUpdate.TabIndex = 6
+        Me.cmdUpdate.Text = "Update Supervisor"
+        Me.cmdUpdate.UseVisualStyleBackColor = True
+        Me.cmdUpdate.Visible = False
         '
         'addSupervisor
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(728, 532)
+        Me.Controls.Add(Me.cmdUpdate)
         Me.Controls.Add(Me.allSup)
         Me.Controls.Add(Me.cmdAdd)
         Me.Controls.Add(Me.txtFileNo)
@@ -112,4 +136,5 @@ Partial Class addSupervisor
     Friend WithEvents Label2 As Label
     Friend WithEvents cmdAdd As Button
     Friend WithEvents allSup As DataGridView
+    Friend WithEvents cmdUpdate As Button
 End Class

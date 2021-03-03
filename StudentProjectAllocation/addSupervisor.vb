@@ -38,6 +38,15 @@ Public Class addSupervisor
         Dim adapter As New MySqlDataAdapter("SELECT * FROM supervisors", conn)
         adapter.Fill(ds, "Supervisors")
         allSup.DataSource = ds.Tables(0)
+
         DisconnectDatabase()
+    End Sub
+
+    Private Sub allSup_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles allSup.CellContentClick
+        Dim row As DataGridViewRow = allSup.CurrentRow
+        txtFileNo.Text = row.Cells(1).Value.ToString()
+        txtFullName.Text = row.Cells(2).Value.ToString()
+        cmdAdd.Visible = False
+        cmdUpdate.Visible = True
     End Sub
 End Class
