@@ -104,7 +104,7 @@ Partial Class addSupervisor
         '
         Me.cmdUpdate.AutoSize = True
         Me.cmdUpdate.Font = New System.Drawing.Font("Monotype Corsiva", 14.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdUpdate.Location = New System.Drawing.Point(117, 128)
+        Me.cmdUpdate.Location = New System.Drawing.Point(216, 128)
         Me.cmdUpdate.Name = "cmdUpdate"
         Me.cmdUpdate.Size = New System.Drawing.Size(147, 62)
         Me.cmdUpdate.TabIndex = 6
