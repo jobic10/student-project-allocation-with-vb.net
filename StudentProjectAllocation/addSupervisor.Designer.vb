@@ -161,7 +161,7 @@ Partial Class addSupervisor
         Me.Controls.Add(Me.txtFullName)
         Me.Controls.Add(Me.Label1)
         Me.Name = "addSupervisor"
-        Me.Text = "Add New Supervisor"
+        Me.Text = "Supervisors Management Window"
         CType(Me.allSup, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

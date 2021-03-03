@@ -63,4 +63,9 @@ Public Class mdiHome
         addSupervisor.MdiParent = Me
         addSupervisor.Show()
     End Sub
+
+    Private Sub ManageStudentsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ManageStudentsToolStripMenuItem.Click
+        addStudent.MdiParent = Me
+        addStudent.Show()
+    End Sub
 End Class
