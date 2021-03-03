@@ -29,6 +29,8 @@ Partial Class addSupervisor
         Me.cmdAdd = New System.Windows.Forms.Button()
         Me.allSup = New System.Windows.Forms.DataGridView()
         Me.cmdUpdate = New System.Windows.Forms.Button()
+        Me.txtId = New System.Windows.Forms.TextBox()
+        Me.cmdReset = New System.Windows.Forms.Button()
         CType(Me.allSup, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -110,11 +112,33 @@ Partial Class addSupervisor
         Me.cmdUpdate.UseVisualStyleBackColor = True
         Me.cmdUpdate.Visible = False
         '
+        'txtId
+        '
+        Me.txtId.Font = New System.Drawing.Font("Times New Roman", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtId.Location = New System.Drawing.Point(392, 16)
+        Me.txtId.Name = "txtId"
+        Me.txtId.Size = New System.Drawing.Size(246, 32)
+        Me.txtId.TabIndex = 7
+        Me.txtId.Visible = False
+        '
+        'cmdReset
+        '
+        Me.cmdReset.AutoSize = True
+        Me.cmdReset.Font = New System.Drawing.Font("Monotype Corsiva", 14.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdReset.Location = New System.Drawing.Point(17, 128)
+        Me.cmdReset.Name = "cmdReset"
+        Me.cmdReset.Size = New System.Drawing.Size(147, 62)
+        Me.cmdReset.TabIndex = 8
+        Me.cmdReset.Text = "Reset Form"
+        Me.cmdReset.UseVisualStyleBackColor = True
+        '
         'addSupervisor
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(728, 532)
+        Me.Controls.Add(Me.cmdReset)
+        Me.Controls.Add(Me.txtId)
         Me.Controls.Add(Me.cmdUpdate)
         Me.Controls.Add(Me.allSup)
         Me.Controls.Add(Me.cmdAdd)
@@ -137,4 +161,6 @@ Partial Class addSupervisor
     Friend WithEvents cmdAdd As Button
     Friend WithEvents allSup As DataGridView
     Friend WithEvents cmdUpdate As Button
+    Friend WithEvents txtId As TextBox
+    Friend WithEvents cmdReset As Button
 End Class

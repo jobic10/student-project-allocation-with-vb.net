@@ -44,9 +44,19 @@ Public Class addSupervisor
 
     Private Sub allSup_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles allSup.CellContentClick
         Dim row As DataGridViewRow = allSup.CurrentRow
+        txtId.Text = row.Cells(0).Value.ToString()
         txtFileNo.Text = row.Cells(1).Value.ToString()
         txtFullName.Text = row.Cells(2).Value.ToString()
         cmdAdd.Visible = False
         cmdUpdate.Visible = True
+    End Sub
+
+    Private Sub cmdReset_Click(sender As Object, e As EventArgs) Handles cmdReset.Click
+        txtId.Text = ""
+        txtFileNo.Text = ""
+        txtFullName.Text = ""
+        cmdAdd.Visible = True
+        cmdUpdate.Visible = False
+
     End Sub
 End Class
