@@ -55,13 +55,14 @@ Partial Class mdiHome
         Me.IndexToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.StudentMenu = New System.Windows.Forms.ToolStripMenuItem()
         Me.ManageStudentsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AllocationMenu = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip.SuspendLayout()
         Me.StatusStrip.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip
         '
-        Me.MenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileMenu, Me.SupervisorMenu, Me.StudentMenu, Me.ViewMenu, Me.WindowsMenu, Me.HelpMenu})
+        Me.MenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileMenu, Me.AllocationMenu, Me.SupervisorMenu, Me.StudentMenu, Me.ViewMenu, Me.WindowsMenu, Me.HelpMenu})
         Me.MenuStrip.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip.MdiWindowListItem = Me.WindowsMenu
         Me.MenuStrip.Name = "MenuStrip"
@@ -80,12 +81,12 @@ Partial Class mdiHome
         'ToolStripSeparator5
         '
         Me.ToolStripSeparator5.Name = "ToolStripSeparator5"
-        Me.ToolStripSeparator5.Size = New System.Drawing.Size(152, 6)
+        Me.ToolStripSeparator5.Size = New System.Drawing.Size(177, 6)
         '
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(155, 22)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ExitToolStripMenuItem.Text = "E&xit"
         '
         'SupervisorMenu
@@ -109,7 +110,7 @@ Partial Class mdiHome
         Me.StatusBarToolStripMenuItem.CheckOnClick = True
         Me.StatusBarToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked
         Me.StatusBarToolStripMenuItem.Name = "StatusBarToolStripMenuItem"
-        Me.StatusBarToolStripMenuItem.Size = New System.Drawing.Size(142, 22)
+        Me.StatusBarToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.StatusBarToolStripMenuItem.Text = "&Status Bar"
         '
         'GroupNameToolStripMenuItem
@@ -117,7 +118,7 @@ Partial Class mdiHome
         Me.GroupNameToolStripMenuItem.Checked = True
         Me.GroupNameToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked
         Me.GroupNameToolStripMenuItem.Name = "GroupNameToolStripMenuItem"
-        Me.GroupNameToolStripMenuItem.Size = New System.Drawing.Size(142, 22)
+        Me.GroupNameToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.GroupNameToolStripMenuItem.Text = "Group Name"
         '
         'WindowsMenu
@@ -130,31 +131,31 @@ Partial Class mdiHome
         'CascadeToolStripMenuItem
         '
         Me.CascadeToolStripMenuItem.Name = "CascadeToolStripMenuItem"
-        Me.CascadeToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
+        Me.CascadeToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.CascadeToolStripMenuItem.Text = "&Cascade"
         '
         'TileVerticalToolStripMenuItem
         '
         Me.TileVerticalToolStripMenuItem.Name = "TileVerticalToolStripMenuItem"
-        Me.TileVerticalToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
+        Me.TileVerticalToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.TileVerticalToolStripMenuItem.Text = "Tile &Vertical"
         '
         'TileHorizontalToolStripMenuItem
         '
         Me.TileHorizontalToolStripMenuItem.Name = "TileHorizontalToolStripMenuItem"
-        Me.TileHorizontalToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
+        Me.TileHorizontalToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.TileHorizontalToolStripMenuItem.Text = "Tile &Horizontal"
         '
         'CloseAllToolStripMenuItem
         '
         Me.CloseAllToolStripMenuItem.Name = "CloseAllToolStripMenuItem"
-        Me.CloseAllToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
+        Me.CloseAllToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.CloseAllToolStripMenuItem.Text = "C&lose All"
         '
         'ArrangeIconsToolStripMenuItem
         '
         Me.ArrangeIconsToolStripMenuItem.Name = "ArrangeIconsToolStripMenuItem"
-        Me.ArrangeIconsToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
+        Me.ArrangeIconsToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ArrangeIconsToolStripMenuItem.Text = "&Arrange Icons"
         '
         'HelpMenu
@@ -167,12 +168,12 @@ Partial Class mdiHome
         'ToolStripSeparator8
         '
         Me.ToolStripSeparator8.Name = "ToolStripSeparator8"
-        Me.ToolStripSeparator8.Size = New System.Drawing.Size(165, 6)
+        Me.ToolStripSeparator8.Size = New System.Drawing.Size(177, 6)
         '
         'AboutToolStripMenuItem
         '
         Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
-        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(168, 22)
+        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.AboutToolStripMenuItem.Text = "&About ..."
         '
         'StatusStrip
@@ -241,7 +242,7 @@ Partial Class mdiHome
         Me.dropdownLogout.ImageTransparentColor = System.Drawing.Color.Black
         Me.dropdownLogout.Name = "dropdownLogout"
         Me.dropdownLogout.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.L), System.Windows.Forms.Keys)
-        Me.dropdownLogout.Size = New System.Drawing.Size(155, 22)
+        Me.dropdownLogout.Size = New System.Drawing.Size(180, 22)
         Me.dropdownLogout.Text = "&Log out"
         '
         'IndexToolStripMenuItem
@@ -264,6 +265,12 @@ Partial Class mdiHome
         Me.ManageStudentsToolStripMenuItem.Name = "ManageStudentsToolStripMenuItem"
         Me.ManageStudentsToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ManageStudentsToolStripMenuItem.Text = "Manage Students"
+        '
+        'AllocationMenu
+        '
+        Me.AllocationMenu.Name = "AllocationMenu"
+        Me.AllocationMenu.Size = New System.Drawing.Size(73, 20)
+        Me.AllocationMenu.Text = "Allocation"
         '
         'mdiHome
         '
@@ -317,4 +324,5 @@ Partial Class mdiHome
     Friend WithEvents AddNewSupervisorToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents StudentMenu As ToolStripMenuItem
     Friend WithEvents ManageStudentsToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents AllocationMenu As ToolStripMenuItem
 End Class
