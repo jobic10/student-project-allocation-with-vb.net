@@ -18,8 +18,8 @@ Public Class addSupervisor
             If mysqli_num_rows > 0 Then
                 loadData()
                 showInfo("New Supervisor Has Been Created")
-                txtFileNo.Text = ""
-                txtFullName.Text = ""
+                cmdReset.PerformClick()
+
 
             Else
                 showError("Supervisor could not be added. Duplicate File No ")
@@ -49,6 +49,7 @@ Public Class addSupervisor
         txtFullName.Text = row.Cells(1).Value.ToString()
         cmdAdd.Visible = False
         cmdUpdate.Visible = True
+        cmdDelete.Visible = True
     End Sub
 
     Private Sub cmdReset_Click(sender As Object, e As EventArgs) Handles cmdReset.Click
@@ -57,7 +58,7 @@ Public Class addSupervisor
         txtFullName.Text = ""
         cmdAdd.Visible = True
         cmdUpdate.Visible = False
-
+        cmdDelete.Visible = False
     End Sub
 
     Private Sub cmdUpdate_Click(sender As Object, e As EventArgs) Handles cmdUpdate.Click
@@ -80,8 +81,7 @@ Public Class addSupervisor
             If mysqli_num_rows > 0 Then
                 loadData()
                 showInfo("Supervisor's Details Has Been Updated")
-                txtFileNo.Text = ""
-                txtFullName.Text = ""
+                cmdReset.PerformClick()
 
             Else
                 showError("Supervisor's details could not be updated. Duplicate File No ")
@@ -89,5 +89,38 @@ Public Class addSupervisor
         Catch ex As Exception
             showError(ex.ToString())
         End Try
+    End Sub
+
+    Private Sub cmdDelete_Click(sender As Object, e As EventArgs) Handles cmdDelete.Click
+        If MsgBox("Are you sure you want to delete this Supervisor? " & vbNewLine & "If this Supervisor has any supervisee(s), it's going to be reset." & vbNewLine & "Proceed ?", vbYesNo) = vbYes Then
+            Dim id As String = ""
+            Try
+                id = txtId.Text
+                If id = "" Then
+                    showError("Invalid Supervisor Selected")
+                    Return
+                End If
+                cmd.CommandText = "DELETE FROM supervisors WHERE id=@id"
+                cmd.Parameters.AddWithValue("@id", id)
+                Query()
+                If mysqli_num_rows > 0 Then
+                    cmd.CommandText = "UPDATE students SET supervisor_id = 0 WHERE supervisor_id=@id"
+                    cmd.Parameters.AddWithValue("@id", id)
+                    Query()
+                    loadData()
+                    showInfo("Supervisor has been deleted")
+                    cmdReset.PerformClick()
+
+                Else
+                    showError("Supervisor could not be deleted. ")
+                End If
+            Catch ex As Exception
+                showError(ex.ToString())
+            End Try
+        Else
+            showInfo("Action cancelled.")
+        End If
+
+
     End Sub
 End Class

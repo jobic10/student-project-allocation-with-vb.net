@@ -31,6 +31,7 @@ Partial Class addSupervisor
         Me.cmdUpdate = New System.Windows.Forms.Button()
         Me.txtId = New System.Windows.Forms.TextBox()
         Me.cmdReset = New System.Windows.Forms.Button()
+        Me.cmdDelete = New System.Windows.Forms.Button()
         CType(Me.allSup, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -132,11 +133,24 @@ Partial Class addSupervisor
         Me.cmdReset.Text = "Reset Form"
         Me.cmdReset.UseVisualStyleBackColor = True
         '
+        'cmdDelete
+        '
+        Me.cmdDelete.AutoSize = True
+        Me.cmdDelete.Font = New System.Drawing.Font("Monotype Corsiva", 14.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdDelete.Location = New System.Drawing.Point(17, 205)
+        Me.cmdDelete.Name = "cmdDelete"
+        Me.cmdDelete.Size = New System.Drawing.Size(346, 62)
+        Me.cmdDelete.TabIndex = 9
+        Me.cmdDelete.Text = "Delete Supervisor"
+        Me.cmdDelete.UseVisualStyleBackColor = True
+        Me.cmdDelete.Visible = False
+        '
         'addSupervisor
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(728, 532)
+        Me.Controls.Add(Me.cmdDelete)
         Me.Controls.Add(Me.cmdReset)
         Me.Controls.Add(Me.txtId)
         Me.Controls.Add(Me.cmdUpdate)
@@ -163,4 +177,5 @@ Partial Class addSupervisor
     Friend WithEvents cmdUpdate As Button
     Friend WithEvents txtId As TextBox
     Friend WithEvents cmdReset As Button
+    Friend WithEvents cmdDelete As Button
 End Class
