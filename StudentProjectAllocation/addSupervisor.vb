@@ -35,7 +35,7 @@ Public Class addSupervisor
     Public Sub loadData()
         ConnectDatabase()
         Dim ds As New DataSet()
-        Dim adapter As New MySqlDataAdapter("SELECT fullname As 'Supervisor Full Name', fileno As 'File Number' FROM supervisors", conn)
+        Dim adapter As New MySqlDataAdapter("SELECT * FROM supervisors", conn)
         adapter.Fill(ds, "Supervisors")
         allSup.DataSource = ds.Tables(0)
 

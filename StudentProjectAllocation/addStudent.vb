@@ -35,7 +35,7 @@ Public Class addStudent
     Public Sub loadData()
         ConnectDatabase()
         Dim ds As New DataSet()
-        Dim adapter As New MySqlDataAdapter("SELECT fullname AS 'Student Full Name', regno as 'Matriculation Number' FROM students", conn)
+        Dim adapter As New MySqlDataAdapter("SELECT * FROM students", conn)
         adapter.Fill(ds, "Students")
         allSup.DataSource = ds.Tables(0)
 
