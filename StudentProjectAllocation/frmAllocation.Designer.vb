@@ -42,7 +42,7 @@ Partial Class frmAllocation
         Me.gridSupervisor.Location = New System.Drawing.Point(0, 318)
         Me.gridSupervisor.Name = "gridSupervisor"
         Me.gridSupervisor.ReadOnly = True
-        Me.gridSupervisor.Size = New System.Drawing.Size(504, 174)
+        Me.gridSupervisor.Size = New System.Drawing.Size(528, 174)
         Me.gridSupervisor.TabIndex = 0
         Me.gridSupervisor.Visible = False
         '
@@ -59,7 +59,7 @@ Partial Class frmAllocation
         Me.gridStudents.Location = New System.Drawing.Point(0, 144)
         Me.gridStudents.Name = "gridStudents"
         Me.gridStudents.ReadOnly = True
-        Me.gridStudents.Size = New System.Drawing.Size(504, 174)
+        Me.gridStudents.Size = New System.Drawing.Size(528, 174)
         Me.gridStudents.TabIndex = 1
         Me.gridStudents.Visible = False
         '
@@ -78,7 +78,7 @@ Partial Class frmAllocation
         '
         Me.cmdViewStudents.AutoSize = True
         Me.cmdViewStudents.Font = New System.Drawing.Font("Monotype Corsiva", 14.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdViewStudents.Location = New System.Drawing.Point(12, 80)
+        Me.cmdViewStudents.Location = New System.Drawing.Point(0, 80)
         Me.cmdViewStudents.Name = "cmdViewStudents"
         Me.cmdViewStudents.Size = New System.Drawing.Size(171, 38)
         Me.cmdViewStudents.TabIndex = 18
@@ -100,7 +100,7 @@ Partial Class frmAllocation
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(504, 492)
+        Me.ClientSize = New System.Drawing.Size(528, 492)
         Me.Controls.Add(Me.cmdViewSupervisors)
         Me.Controls.Add(Me.cmdViewStudents)
         Me.Controls.Add(Me.cmdAllocate)
