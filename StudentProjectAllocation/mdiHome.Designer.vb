@@ -83,7 +83,7 @@ Partial Class mdiHome
         Me.dropdownLogout.ImageTransparentColor = System.Drawing.Color.Black
         Me.dropdownLogout.Name = "dropdownLogout"
         Me.dropdownLogout.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.L), System.Windows.Forms.Keys)
-        Me.dropdownLogout.Size = New System.Drawing.Size(155, 22)
+        Me.dropdownLogout.Size = New System.Drawing.Size(180, 22)
         Me.dropdownLogout.Text = "&Log out"
         '
         'ToolStripSeparator5
@@ -259,7 +259,8 @@ Partial Class mdiHome
         'lblGroupInfo
         '
         Me.lblGroupInfo.AutoSize = True
-        Me.lblGroupInfo.Location = New System.Drawing.Point(634, 9)
+        Me.lblGroupInfo.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.lblGroupInfo.Location = New System.Drawing.Point(774, 9)
         Me.lblGroupInfo.Name = "lblGroupInfo"
         Me.lblGroupInfo.Size = New System.Drawing.Size(209, 13)
         Me.lblGroupInfo.TabIndex = 9

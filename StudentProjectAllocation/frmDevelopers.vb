@@ -4,7 +4,7 @@ Public Class frmDevelopers
         Dim Segun As Member = New Member("Olaniyi Segun Samuel", "15/52HA004")
         Dim Presh As Member = New Member("Olaniyi Segun Samuel", "15/52HA026")
         Dim Dara As Member = New Member("Olaniyi Segun Samuel", "15/52HA074")
-        Dim Ola As Member = New Member("Olaoye Kolwawole Olaoye", "16/30GB089")
+        Dim Ola As Member = New Member("Olaoye Kolwawole Olaoye", "16/30GD089")
         Dim Tes As Member = New Member("Ijaiya Tesleemat", "16/30GB070")
 
 
