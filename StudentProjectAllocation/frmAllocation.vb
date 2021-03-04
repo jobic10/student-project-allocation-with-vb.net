@@ -73,4 +73,12 @@ Public Class frmAllocation
         loadData()
         DisconnectDatabase()
     End Sub
+
+    Private Sub cmdViewStudents_Click(sender As Object, e As EventArgs) Handles cmdViewStudents.Click
+        gridStudents.Visible = Not gridStudents.Visible
+    End Sub
+
+    Private Sub cmdViewSupervisors_Click(sender As Object, e As EventArgs) Handles cmdViewSupervisors.Click
+        gridSupervisor.Visible = Not gridSupervisor.Visible
+    End Sub
 End Class
