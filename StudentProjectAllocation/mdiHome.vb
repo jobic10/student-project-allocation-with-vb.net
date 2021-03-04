@@ -17,10 +17,6 @@ Public Class mdiHome
         Me.LayoutMdi(MdiLayout.TileHorizontal)
     End Sub
 
-    Private Sub ArrangeIconsToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) Handles ArrangeIconsToolStripMenuItem.Click
-        Me.LayoutMdi(MdiLayout.ArrangeIcons)
-    End Sub
-
     Private Sub CloseAllToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) Handles CloseAllToolStripMenuItem.Click
         ' Close all child forms of the parent.
         For Each ChildForm As Form In Me.MdiChildren
