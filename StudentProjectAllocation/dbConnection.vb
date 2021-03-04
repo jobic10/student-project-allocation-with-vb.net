@@ -33,6 +33,15 @@ Module dbConnection
         Catch myerror As MySql.Data.MySqlClient.MySqlException
         End Try
     End Sub
+    Public Sub Login()
+        Try
+            ConnectDatabase()
+            cmd.Connection = conn
+            dr = cmd.ExecuteReader()
+        Catch ex As Exception
+
+        End Try
+    End Sub
     Public Sub Query(Optional ByVal type = "I")
         mysqli_num_rows = -1
         Try
@@ -43,15 +52,17 @@ Module dbConnection
             type = UCase(type)
             If (type = "I" Or type = "D") Then 'insert/delete
                 mysqli_num_rows = cmd.ExecuteNonQuery()
-            ElseIf (type = "A") Then
+
+            Else
                 dr = cmd.ExecuteReader()
+
 
                 obj = cmd.ExecuteScalar()
             End If
             cmd.Parameters.Clear()
 
         Catch ex As Exception
-            ' showError("Error Occured " & ex.ToString())
+            showError("Error Occured " & ex.ToString())
         Finally
             If (Not type = "A") Then
                 DisconnectDatabase()

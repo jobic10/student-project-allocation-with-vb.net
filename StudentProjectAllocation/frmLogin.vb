@@ -12,21 +12,31 @@
         Try
             username = txtUsername.Text
             password = txtPassword.Text
+            If (username = "" Or password = "") Then
+                showError("Both Username and Password Fields Are Required")
+                Return
+            End If
+            cmd.CommandText = "SELECT username FROM users WHERE username=@username AND password=@password"
+            cmd.Parameters.Clear()
+            cmd.Parameters.AddWithValue("@username", username)
+            cmd.Parameters.AddWithValue("@password", password)
+            Login()
+            If dr.Read() Then
+                'If Not obj Is Nothing Then
+                'If mysqli_num_rows > 0 Then
+                MsgBox("Access Granted", vbInformation, "Success")
+                txtUsername.Text = ""
+                txtPassword.Text = ""
+                Me.Hide()
+                mdiHome.Show()
+                dr.Close()
+            Else
+                MsgBox("Access Denied", vbCritical, "Error")
+                dr.Close()
+            End If
         Catch ex As Exception
+            MsgBox(ex.ToString(), vbCritical, "Error")
 
         End Try
-        cmd.CommandText = "SELECT username FROM users WHERE username =@username AND password=@password"
-        cmd.Parameters.AddWithValue("@username", username)
-        cmd.Parameters.AddWithValue("@password", password)
-        Query()
-        If Not obj Is Nothing Then
-            MsgBox("Access Granted", vbInformation, "Success")
-            txtUsername.Text = ""
-            txtPassword.Text = ""
-            Me.Hide()
-            mdiHome.Show()
-        Else
-            MsgBox("Access Denied", vbCritical, "Error")
-        End If
     End Sub
 End Class
