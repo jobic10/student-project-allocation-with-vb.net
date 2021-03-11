@@ -11,7 +11,7 @@ Public Class frmDevelopers
         Dim Segun As Member = New Member("Olaniyi Segun Samuel", "17/52HA124")
         Dim Wale As Member = New Member("Olawale Hammed Wale", "17/52HA125")
         Dim Oseni As Member = New Member("Oseni Kehinde Adeniyi", "17/52HA126")
-        Dim Job As Member = New Member("Olaniyi Segun Samuel", "17/52HA127")
+        Dim Job As Member = New Member("Owonubi Job Sunday", "17/52HA127")
         Dim Members() As Member = {Segun, Presh, Dara, Ola, Tes, Sofiat, Kayode, Wale, Oseni, Job}
 
         GroupBox1.Text = Members(0).FullName
