@@ -30,6 +30,7 @@
                 Me.Hide()
                 mdiHome.Show()
                 dr.Close()
+                conn.Close()
             Else
                 MsgBox("Access Denied", vbCritical, "Error")
                 dr.Close()
