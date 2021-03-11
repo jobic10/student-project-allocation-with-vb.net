@@ -33,13 +33,14 @@ Partial Class frmLogin
         '
         'cmdExit
         '
+        Me.cmdExit.BackColor = System.Drawing.Color.FloralWhite
         Me.cmdExit.Font = New System.Drawing.Font("Monotype Corsiva", 15.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmdExit.Location = New System.Drawing.Point(479, 387)
         Me.cmdExit.Name = "cmdExit"
         Me.cmdExit.Size = New System.Drawing.Size(167, 46)
         Me.cmdExit.TabIndex = 0
         Me.cmdExit.Text = "&Exit"
-        Me.cmdExit.UseVisualStyleBackColor = True
+        Me.cmdExit.UseVisualStyleBackColor = False
         '
         'lblUsername
         '
@@ -80,23 +81,25 @@ Partial Class frmLogin
         '
         'cmdLogin
         '
+        Me.cmdLogin.BackColor = System.Drawing.Color.FloralWhite
         Me.cmdLogin.Font = New System.Drawing.Font("Monotype Corsiva", 15.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmdLogin.Location = New System.Drawing.Point(304, 225)
         Me.cmdLogin.Name = "cmdLogin"
         Me.cmdLogin.Size = New System.Drawing.Size(167, 46)
         Me.cmdLogin.TabIndex = 5
         Me.cmdLogin.Text = "&Login"
-        Me.cmdLogin.UseVisualStyleBackColor = True
+        Me.cmdLogin.UseVisualStyleBackColor = False
         '
         'cmdReset
         '
+        Me.cmdReset.BackColor = System.Drawing.Color.FloralWhite
         Me.cmdReset.Font = New System.Drawing.Font("Monotype Corsiva", 15.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmdReset.Location = New System.Drawing.Point(479, 225)
         Me.cmdReset.Name = "cmdReset"
         Me.cmdReset.Size = New System.Drawing.Size(167, 46)
         Me.cmdReset.TabIndex = 6
         Me.cmdReset.Text = "&Reset"
-        Me.cmdReset.UseVisualStyleBackColor = True
+        Me.cmdReset.UseVisualStyleBackColor = False
         '
         'frmLogin
         '

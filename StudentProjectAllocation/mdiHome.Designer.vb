@@ -83,7 +83,7 @@ Partial Class mdiHome
         Me.dropdownLogout.ImageTransparentColor = System.Drawing.Color.Black
         Me.dropdownLogout.Name = "dropdownLogout"
         Me.dropdownLogout.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.L), System.Windows.Forms.Keys)
-        Me.dropdownLogout.Size = New System.Drawing.Size(180, 22)
+        Me.dropdownLogout.Size = New System.Drawing.Size(155, 22)
         Me.dropdownLogout.Text = "&Log out"
         '
         'ToolStripSeparator5
@@ -164,25 +164,25 @@ Partial Class mdiHome
         'CascadeToolStripMenuItem
         '
         Me.CascadeToolStripMenuItem.Name = "CascadeToolStripMenuItem"
-        Me.CascadeToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.CascadeToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
         Me.CascadeToolStripMenuItem.Text = "&Cascade"
         '
         'TileVerticalToolStripMenuItem
         '
         Me.TileVerticalToolStripMenuItem.Name = "TileVerticalToolStripMenuItem"
-        Me.TileVerticalToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.TileVerticalToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
         Me.TileVerticalToolStripMenuItem.Text = "Tile &Vertical"
         '
         'TileHorizontalToolStripMenuItem
         '
         Me.TileHorizontalToolStripMenuItem.Name = "TileHorizontalToolStripMenuItem"
-        Me.TileHorizontalToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.TileHorizontalToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
         Me.TileHorizontalToolStripMenuItem.Text = "Tile &Horizontal"
         '
         'CloseAllToolStripMenuItem
         '
         Me.CloseAllToolStripMenuItem.Name = "CloseAllToolStripMenuItem"
-        Me.CloseAllToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.CloseAllToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
         Me.CloseAllToolStripMenuItem.Text = "C&lose All"
         '
         'HelpMenu
@@ -195,20 +195,20 @@ Partial Class mdiHome
         'AboutToolStripMenuItem
         '
         Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
-        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(160, 22)
+        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.AboutToolStripMenuItem.Text = "&About ..."
         '
         'ToolStripSeparator8
         '
         Me.ToolStripSeparator8.Name = "ToolStripSeparator8"
-        Me.ToolStripSeparator8.Size = New System.Drawing.Size(157, 6)
+        Me.ToolStripSeparator8.Size = New System.Drawing.Size(177, 6)
         '
         'GroupMembersMenu
         '
         Me.GroupMembersMenu.Image = CType(resources.GetObject("GroupMembersMenu.Image"), System.Drawing.Image)
         Me.GroupMembersMenu.ImageTransparentColor = System.Drawing.Color.Black
         Me.GroupMembersMenu.Name = "GroupMembersMenu"
-        Me.GroupMembersMenu.Size = New System.Drawing.Size(160, 22)
+        Me.GroupMembersMenu.Size = New System.Drawing.Size(180, 22)
         Me.GroupMembersMenu.Text = "&Group Members"
         '
         'StatusStrip

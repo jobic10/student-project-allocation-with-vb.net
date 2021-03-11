@@ -220,5 +220,35 @@
   <ItemGroup>
     <None Include="Resources\logo.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\004.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\026.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\070.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\074.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\089.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\123.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\124.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\125.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\126.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\127.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
